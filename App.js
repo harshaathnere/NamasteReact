@@ -23,6 +23,9 @@ const parent = React.createElement('div',
 //const heading = React.createElement("h1",{id: "heading,", xyz: "abc"}, "Hello World React Inside")
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
+
+// JSX
+const jstheading =<h1 id="heading"> JSx syntax </h1>
 //root.render(heading);
 console.log(parent);
 root.render(parent);
