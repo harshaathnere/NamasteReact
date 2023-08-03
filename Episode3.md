@@ -8,3 +8,5 @@ React Component
 
 A function which is return JSX is functional Componet.
 Component Composition
+CSS, by line, seperate file, Taliwand CSS
+pros dynamically pass Information , we will be passing data by props

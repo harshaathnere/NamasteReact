@@ -21,3 +21,21 @@
     margin: 10px;
     list-style-type: none;
 }
+.res-card{
+    padding: 5px;
+    width: 200px;
+    height: 300px;
+    
+}
+.res-card :hover{
+    cursor: pointer;
+    border: 1px solid black;  
+}
+.search{
+    padding: 10px;
+}
+.res-logo{
+    padding: 5px;
+    width: 190px;
+    
+}
