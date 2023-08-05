@@ -58,14 +58,17 @@ const Header = () => {
 }
 
 
-const RestaurantCard =() => {
+// Desstrcturing
+
+const RestaurantCard =({res, cuisine}) => {
+  //console.log(props);
     return(
         <div className="res-card" style={{backgroundColor: "#f0f0f0"}}>
             <img className="res-logo"
              alt="rest-logo"
              src="https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141352.jpg"/>
-            <h3>Megna Foods</h3>
-            <h4>Biryani Foods</h4>
+            <h3>{res}</h3>
+            <h4>{cuisine}</h4>
             <h4>4.4 Star</h4>
             <h4>38 Min</h4>
         </div>
@@ -78,8 +81,8 @@ const Body = () => {
 
 
       <div className="res-container">
-      <RestaurantCard/>
-      <RestaurantCard/>
+      <RestaurantCard res="Megna Foods"  cuisine="Biryani"/>
+      <RestaurantCard res="KFC" cuisine="Burger Fast Food"/>
       <RestaurantCard/>
       <RestaurantCard/>
       <RestaurantCard/>

@@ -10,3 +10,6 @@ A function which is return JSX is functional Componet.
 Component Composition
 CSS, by line, seperate file, Taliwand CSS
 pros dynamically pass Information , we will be passing data by props
+// Config driven UI 
+all the ui driven bu UI, data is config,,
+data is diferent based on location, according to the data from backed ui will be changed
