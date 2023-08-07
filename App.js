@@ -62,16 +62,17 @@ const Header = () => {
 
 const RestaurantCard =(props) => {
   const {resData} = props;
+  const {cloudinaryImageId,cuisines,name,avgRating,costForTwo,deliveryTime} = resData?.data;
     return(
         <div className="res-card" style={{backgroundColor: "#f0f0f0"}}>
             <img className="res-logo"
              alt="rest-logo"
              src={ "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/" + resData.data.cloudinaryImageId }/>
-            <h3>{resData.data.name}</h3>
-            <h4>{resData.data.cuisines}</h4>
-            <h4>{resData.data.avgRating}</h4>
-            <h4>{resData.data.costForTwo}</h4>
-            <h4>{resData.data.deliveryTime}</h4>
+            <h3>{name}</h3>
+            <h4>{cuisines}</h4>
+            <h4>{avgRating}</h4>
+            <h4>{costForTwo}</h4>
+            <h4>{deliveryTime}</h4>
         </div>
     )
 }
@@ -1579,7 +1580,7 @@ const resObj = [
   },
 ]
    
-
+// not using key (not accepatable)  <<< index as key <<<< unique id ( best Practice)
 const Body = () => {
   return (
     <div className="body">
@@ -1587,11 +1588,9 @@ const Body = () => {
 
 
       <div className="res-container">
-      <RestaurantCard resData={resObj[0]}/>
-      {/* <RestaurantCard res="KFC" cuisine="Burger Fast Food"/>
-      <RestaurantCard/>
-      <RestaurantCard/>
-      <RestaurantCard/> */}
+     {
+      resObj.map(restaurant => <RestaurantCard key={restaurant.data.id} resData={restaurant}/>)
+     }
       </div>
     </div>
   );
