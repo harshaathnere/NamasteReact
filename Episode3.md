@@ -13,3 +13,16 @@ pros dynamically pass Information , we will be passing data by props
 // Config driven UI 
 all the ui driven bu UI, data is config,,
 data is diferent based on location, according to the data from backed ui will be changed
+
+    //There are two type of export and import 
+
+    Default import/Export
+
+    export default Component;
+    import Component from "path"
+
+
+    Named Export/Import
+    export const Component;
+    import {Componenet} from "path";
+    
